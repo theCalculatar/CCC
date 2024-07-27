@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "995676293356",
+    "project_id": "ccc-ccb08",
+    "storage_bucket": "ccc-ccb08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995676293356:android:c255998a7bc1b58b6dbdc9",
+        "android_client_info": {
+          "package_name": "com.example.ccc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQlJtQDl31t0-0xAGAZ3alyTw-9ypAwnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
