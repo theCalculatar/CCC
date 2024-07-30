@@ -1,5 +1,7 @@
 package com.example.medinow.login
 
+import com.example.ccc.login.LoggedInUserView
+
 /**
  * Authentication result : success (user details) or error message.
  */

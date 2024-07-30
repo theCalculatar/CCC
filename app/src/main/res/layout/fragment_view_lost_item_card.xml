@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/lost_item_pic"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:src="@drawable/baseline_delete_outline_24"
+        android:visibility="gone"
+        app:tint="#ff00"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/lost_item_pic"
+        android:stretchColumns="2"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Posted by"/>
+            <TextView android:layout_weight=".5" android:id="@+id/name"/>
+        </TableRow>
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Contact"/>
+            <TextView android:layout_weight=".5" android:id="@+id/email" />
+        </TableRow>
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Item type"/>
+            <TextView android:layout_weight=".5" android:id="@+id/item" />
+        </TableRow>
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Drop off"/>
+            <TextView android:layout_weight=".5" android:id="@+id/drop_off" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

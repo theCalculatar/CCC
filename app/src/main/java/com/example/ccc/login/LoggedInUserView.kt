@@ -1,4 +1,4 @@
-package com.example.medinow.login
+package com.example.ccc.login
 
 /**
  * User details post authentication that is exposed to the UI

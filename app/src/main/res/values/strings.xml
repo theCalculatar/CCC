@@ -23,5 +23,6 @@
     <string name="invalid_username">Invalid last name</string>
     <string name="invalid_email">Invalid email</string>
     <string name="email_link_sent_check_your_email_to_change_password">Email link sent check your email to change password</string>
+    <string name="report">Report</string>
 
 </resources>

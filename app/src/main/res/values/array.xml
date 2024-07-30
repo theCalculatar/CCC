@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lost_type_array">
+        <item>Key</item>
+        <item>Laptop</item>
+        <item>Phone</item>
+        <item>Book</item>
+
+    </string-array>
+</resources>
