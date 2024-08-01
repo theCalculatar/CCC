@@ -18,13 +18,17 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.ccc.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_profile"
+        android:name="com.example.ccc.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/navigation_report"
         android:name="com.example.ccc.ui.report.ReportFragment"
         android:label="Reports"
         tools:layout="@layout/fragment_lostandfound"/>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.ccc.ui.profile.EditProfileFragment"
+        android:label="EditProfileFragment" />
 </navigation>

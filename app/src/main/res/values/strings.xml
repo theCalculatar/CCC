@@ -34,5 +34,7 @@
     <string name="date">Date</string>
     <string name="message">Message...</string>
     <string name="beginning_of_messages">Beginning of messages</string>
+    <string name="sign_out">Sign out</string>
+    <string name="edit">Edit Profile</string>
 
 </resources>
