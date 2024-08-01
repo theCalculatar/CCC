@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:padding="7dp"
                 android:layout_gravity="center"
-                android:src="@drawable/baseline_chat_24"
+                android:src="@drawable/ic_chat_alt"
                 app:tint="@color/white" />
         </androidx.cardview.widget.CardView>
 
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/baseline_map_24"
+                android:src="@drawable/ic_pin_alt"
                 app:tint="@color/white" />
         </androidx.cardview.widget.CardView>
 
