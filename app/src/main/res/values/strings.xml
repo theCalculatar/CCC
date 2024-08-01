@@ -25,4 +25,14 @@
     <string name="email_link_sent_check_your_email_to_change_password">Email link sent check your email to change password</string>
     <string name="report">Report</string>
 
+    // chat
+    <string name="cancel_time">Cancel time:</string>
+    <string name="messages">Messages</string>
+    <string name="request">Requets</string>
+    <string name="last_seen">Last seen</string>
+    <string name="display_message">Display message</string>
+    <string name="date">Date</string>
+    <string name="message">Message...</string>
+    <string name="beginning_of_messages">Beginning of messages</string>
+
 </resources>

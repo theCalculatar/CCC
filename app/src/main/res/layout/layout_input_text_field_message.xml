@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="1dip"
+    android:gravity="center_vertical"
+    android:minHeight="48dp"
+    android:orientation="horizontal">
+
+
+    <EditText
+        android:id="@+id/message_box"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1.0"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:autofillHints=""
+        android:hint="Enter message"
+        android:background="@drawable/login_stroke_18_dp"
+        android:inputType="textLongMessage"
+        android:maxLines="6"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/send_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        app:elevation="0dp"
+        app:fabCustomSize="48dp"
+        android:src="@drawable/ic_baseline_send_24"
+        android:contentDescription="@string/send" />
+</LinearLayout>

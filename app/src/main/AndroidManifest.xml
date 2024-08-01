@@ -32,6 +32,7 @@
         <activity android:name=".login.Registering"
             android:theme="@style/Theme.loginTheme"
             />
+        <activity android:name=".ui.chat.InMessageView" android:theme="@style/Theme.loginTheme"/>
     </application>
 
 </manifest>

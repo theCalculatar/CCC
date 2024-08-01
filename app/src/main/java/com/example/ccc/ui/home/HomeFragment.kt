@@ -1,13 +1,14 @@
 package com.example.ccc.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.ccc.databinding.FragmentHomeBinding
+import com.example.ccc.ui.chat.InMessageView
 
 class HomeFragment : Fragment() {
 
@@ -27,6 +28,13 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val chat = binding.communicate
+
+        chat.setOnClickListener {
+            val chatIntent = Intent(this.context, InMessageView::class.java)
+            startActivity(chatIntent)
+        }
 
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
