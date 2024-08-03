@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.ccc.databinding.FragmentHomeBinding
 import com.example.ccc.ui.chat.InMessageView
 
@@ -23,13 +23,28 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val chat = binding.communicate
+
+        val campus_map = binding.campusMap
+
+        val report_theft = binding.reportTheft
+
+        val emergency = binding.emergency
+
+        emergency.setOnClickListener {
+            Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
+        }
+
+        campus_map.setOnClickListener {
+            Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
+        }
+        report_theft.setOnClickListener {
+            Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
+        }
 
         chat.setOnClickListener {
             val chatIntent = Intent(this.context, InMessageView::class.java)

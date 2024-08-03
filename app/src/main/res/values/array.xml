@@ -5,6 +5,9 @@
         <item>Laptop</item>
         <item>Phone</item>
         <item>Book</item>
-
+        <item>Student Card</item>
+        <item>ID card</item>
+        <item>Spectacles</item>
+        <item>other</item>
     </string-array>
 </resources>

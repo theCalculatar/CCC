@@ -15,15 +15,6 @@ class MessagingRepo {
     private val dbRefAdmin = Firebase.firestore.collection("Admin")
     private val dbAlert = Firebase.firestore.collection("Alerts")
 
-    fun getAllChats(): LiveData<List<PreviousChatsEntity>> {
-        val allChats = MutableLiveData<List<PreviousChatsEntity>>()
-        dbRef.get().addOnSuccessListener {
-            allChats.postValue(it.toObjects())
-        }
-
-        return allChats
-    }
-
     fun getMessages(chatRoomId: String): LiveData<List<MessageEntity>> {
         val messages = MutableLiveData<List<MessageEntity>>()
         dbRef.document(chatRoomId).collection("dialogs")
@@ -37,9 +28,6 @@ class MessagingRepo {
         dbRef.document(message.roomId).collection("dialogs")
             .add(message)
     }
-//    fun insertNew(newPerson: PreviousChatsEntity) {
-//
-//    }
 
     fun getAdminDetails(chatRoomId: String): LiveData<Admin> {
         val admin = MutableLiveData<Admin>()

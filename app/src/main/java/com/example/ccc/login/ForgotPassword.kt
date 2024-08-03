@@ -39,6 +39,7 @@ class ForgotPassword:AppCompatActivity() {
             }
         }
     }
+    //checks if user is a students
     private fun emailValidation(): Boolean {
         val email: String = userEmail.text.toString()
         return if (email.isEmpty()) {
@@ -52,6 +53,7 @@ class ForgotPassword:AppCompatActivity() {
             true
         }
     }
+
     private fun genPasswordLink(email:String){
         progressBar.isVisible = true
         send.isVisible = false
