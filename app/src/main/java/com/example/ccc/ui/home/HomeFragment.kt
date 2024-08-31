@@ -7,10 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.ccc.R
 import com.example.ccc.databinding.FragmentHomeBinding
 import com.example.ccc.ui.chat.InMessageView
 
-class HomeFragment : Fragment() {
+class
+HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -36,7 +39,7 @@ class HomeFragment : Fragment() {
         val emergency = binding.emergency
 
         emergency.setOnClickListener {
-            Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.navigation_emergency)
         }
 
         campus_map.setOnClickListener {

@@ -31,4 +31,9 @@
         android:id="@+id/editProfileFragment"
         android:name="com.example.ccc.ui.profile.EditProfileFragment"
         android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/navigation_emergency"
+        android:name="com.example.ccc.ui.emergency.EmergencyFragment"
+        android:label="Emergency"
+        tools:layout="@layout/fragment_emergency" />
 </navigation>
