@@ -36,4 +36,8 @@
         android:name="com.example.ccc.ui.emergency.EmergencyFragment"
         android:label="Emergency"
         tools:layout="@layout/fragment_emergency" />
+    <fragment
+        android:id="@+id/navigation_crime"
+        android:name="com.example.ccc.ui.crime.CrimeFragment"
+        android:label="See reported crimes" />
 </navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report a crimes"
+        android:textSize="16sp"
+        android:id="@+id/report..."
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:id="@+id/type_spinner"
+        android:layout_below="@id/report..."
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/login_stroke_18_dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_spinner"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:minHeight="48dp"
+        android:imeOptions="actionDone"
+        android:hint="What happend..."
+        android:inputType="text"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/login_stroke_18_dp"
+        android:id="@+id/drop_off"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/report_theft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/drop_off"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:backgroundTint="@color/black"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:text="Report" />
+</RelativeLayout>

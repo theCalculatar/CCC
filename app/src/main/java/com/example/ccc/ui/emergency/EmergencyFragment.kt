@@ -38,7 +38,7 @@ class EmergencyFragment : Fragment() {
         adapter.onClick = { number->
             val intent = Intent(
                 Intent.ACTION_CALL,
-                Uri.parse("tel:" + number)
+                Uri.parse("tel:$number")
             )
             startActivity(intent)
         }

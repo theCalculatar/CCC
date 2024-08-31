@@ -10,4 +10,11 @@
         <item>Spectacles</item>
         <item>other</item>
     </string-array>
+    <string-array name="crime_array">
+        <item>Burglar</item>
+        <item>Robbery</item>
+        <item>Murder</item>
+        <item>Rape</item>
+        <item>Drugs</item>
+    </string-array>
 </resources>

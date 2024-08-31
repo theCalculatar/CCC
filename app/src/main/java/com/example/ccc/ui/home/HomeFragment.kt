@@ -46,7 +46,7 @@ HomeFragment : Fragment() {
             Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
         }
         report_theft.setOnClickListener {
-            Toast.makeText(requireContext(), "Coming soon...",Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.navigation_crime)
         }
 
         chat.setOnClickListener {

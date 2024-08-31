@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/lost_item_pic"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:src="@drawable/baseline_delete_outline_24"
+        android:visibility="gone"
+        app:tint="#ff00"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/lost_item_pic"
+        android:stretchColumns="2"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:id="@+id/table"
+        >
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Posted by"/>
+            <TextView android:layout_weight=".5" android:id="@+id/name"/>
+        </TableRow>
+
+        <TableRow android:weightSum="1" >
+            <TextView android:layout_weight=".5" android:text="Case type"/>
+            <TextView android:layout_weight=".5" android:id="@+id/item" />
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lost_item_pic"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+        <TextView
+            android:text="Descrpition"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:id="@+id/drop_off" />
+    </LinearLayout>
+</RelativeLayout>
