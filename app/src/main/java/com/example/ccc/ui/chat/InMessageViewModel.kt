@@ -18,15 +18,17 @@ class InMessageViewModel( application: Application) : AndroidViewModel(applicati
         appDatabase.insertMessage(message)
     }
 
-//    fun newChat(newPerson: PreviousChatsEntity){
-//        appDatabase.insertNew(newPerson)
-//    }
+    fun updateMessage(message: MessageEntity){
+        appDatabase.updateMessage(message)
+    }
 
-//    fun updateAdmin(message: String, nameUser: String){
-//        appDatabase.sendNotification(nameUser," unknown ",message)
-//    }
     fun getAdminDetails(chatRoomId: String): LiveData<Admin> {
         return appDatabase.getAdminDetails(chatRoomId)
+    }
+
+    fun deleteMessage(messagingId: String) {
+        appDatabase.deleteMessage(messagingId)
+
     }
 
 }

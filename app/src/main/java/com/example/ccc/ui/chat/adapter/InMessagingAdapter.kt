@@ -2,11 +2,14 @@ package com.example.ccc.ui.chat.adapter
 
 
 import android.content.Context
+import android.view.HapticFeedbackConstants
 import android.view.LayoutInflater
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.forEach
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ccc.R
@@ -26,6 +29,7 @@ class InMessagingAdapter(private val context: Context,
         private const val BEGINNING_OF_MESSAGE_TEXT = 3
     }
 
+    var messageClick:((Int, MessageEntity)->Unit)? = null
 
     private val chatId = FirebaseAuth.getInstance().currentUser!!.uid
     private val dbUsers = Firebase.firestore.collection("Users")
@@ -110,8 +114,24 @@ class InMessagingAdapter(private val context: Context,
 
     inner class SentViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
 
+
         val sentMessage: TextView = itemView.findViewById(R.id.sent_text_message)
         val time: TextView = itemView.findViewById(R.id.time_message_sent)
+        init {
+            itemView.setOnLongClickListener {
+                itemView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
+                false
+            }
+            itemView.setOnCreateContextMenuListener { menu, v, menuInfo ->
+                MenuInflater(context).inflate(R.menu.message_menu,menu)
+                menu.forEach {
+                    it.setOnMenuItemClickListener { menuItem->
+                        messageClick?.invoke(menuItem.itemId,messageList[adapterPosition-1])
+                        true
+                    }
+                }
+            }
+        }
     }
     inner class ReceiveViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
 
@@ -119,7 +139,10 @@ class InMessagingAdapter(private val context: Context,
         val time: TextView = itemView.findViewById(R.id.time_message_sent)
         val picture: ImageView = itemView.findViewById(R.id.person_chatting_picture)
 
+
     }
     inner class BeginningOfText(itemView:View): RecyclerView.ViewHolder(itemView){
     }
+
+
 }

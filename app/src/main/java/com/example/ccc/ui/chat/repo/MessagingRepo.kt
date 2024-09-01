@@ -1,7 +1,9 @@
 package com.example.ccc.ui.chat.repo
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.ccc.model.ReportModel
 import com.example.medinow.ui.chat.model.Admin
 import com.example.ccc.ui.chat.model.MessageEntity
 import com.example.ccc.ui.chat.model.PreviousChatsEntity
@@ -20,8 +22,16 @@ class MessagingRepo {
         dbRef.document(chatRoomId).collection("dialogs")
             .orderBy("time")
             .addSnapshotListener { value, _ ->
-            messages.postValue(value?.toObjects())
-        }
+                val arrayList = ArrayList<MessageEntity>()
+                if (value != null) {
+                    for (document in value) {
+                        val obj = document.toObject<MessageEntity>()
+                        obj.messagingId = document.id
+                        arrayList.add(obj)
+                    }
+                }
+                messages.postValue(arrayList)
+            }
         return messages
     }
     fun insertMessage(message: MessageEntity) {
@@ -49,6 +59,17 @@ class MessagingRepo {
 
 
         return admin
+    }
+
+    fun deleteMessage(messagingId: String) {
+        dbRef.document("Community").collection("dialogs")
+            .document(messagingId).delete()
+    }
+
+    fun updateMessage(message: MessageEntity){
+        dbRef.document("Community").collection("dialogs")
+            .document(message.messagingId!!)
+            .set(message)
     }
 
 

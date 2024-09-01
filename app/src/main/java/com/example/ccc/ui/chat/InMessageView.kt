@@ -1,9 +1,11 @@
 package com.example.ccc.ui.chat
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ccc.R
 import com.example.ccc.databinding.ActivityInMessageViewBinding
 import com.example.ccc.ui.chat.adapter.InMessagingAdapter
 import com.example.ccc.ui.chat.model.MessageEntity
@@ -47,14 +49,21 @@ class InMessageView : AppCompatActivity() {
 
                 val adapter = InMessagingAdapter(this,messageList)
                 recyclerView.adapter = adapter
+                adapter.messageClick = {action,message->
+                    Log.d("lee",message.toString())
+                    when(action){
+                        R.id.delete_msg -> message.messagingId?.let {
+                            chatViewModel.deleteMessage(it)
+                        }
+                        else -> {
+                            EditMessageModal(message).show(supportFragmentManager,"Edit_message_frag")
+                        }
+                    }
+                }
 
                 adapter.notifyItemInserted(list.size)
                 recyclerView.scrollToPosition(messageList.size-1)
             }
-
-//        viewModel.getProfile().observe(this){
-//            nameUser = it.firstName+" "+it.lastName
-//        }
 
         sendButton.setOnClickListener{
             //get time
@@ -64,19 +73,18 @@ class InMessageView : AppCompatActivity() {
 
             if(messageToSend.text.toString() != ""){
 
-                messageList.add(
-                    MessageEntity(null,chatId, chatRoomId,
-                    messageToSend.text.toString(),formatted)
-                )
+//                messageList.add(
+//                    MessageEntity(null,chatId, chatRoomId,
+//                    messageToSend.text.toString(),formatted)
+//                )
                 recyclerView.scrollToPosition(messageList.size-1)
 
                 chatViewModel.insertMessages(
                     MessageEntity(null,chatId,chatRoomId,messageToSend.text.toString(),formatted)
                 )
-//                chatViewModel.updateAdmin(messageToSend.text.toString(),nameUser)
-
                 messageToSend.text.clear()
             }
         }
+
     }
 }
