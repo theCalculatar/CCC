@@ -27,9 +27,9 @@ class EmergencyFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(requireContext())
 
         val emergencyContacts = ArrayList<EmergencyModel>().apply {
-            add(EmergencyModel("Campus Control","0152682823"))
-            add(EmergencyModel("Mankweng Police Station","0152682468"))
-            add(EmergencyModel("Health Centre","0153683502"))
+            add(EmergencyModel("Campus Control","0152682823",R.drawable.control))
+            add(EmergencyModel("Mankweng Police Station","0152682468",R.drawable.police))
+            add(EmergencyModel("Health Centre","0153683502",R.drawable.health))
         }
 
         val adapter = EmergencyAdapter(requireContext(),emergencyContacts)
