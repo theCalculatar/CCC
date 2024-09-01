@@ -15,15 +15,16 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="50dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:id="@+id/i.."
-            android:layout_margin="8dp"
             android:layout_marginEnd="8dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             >
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
                 android:id="@+id/lost_item_pic"
                 android:scaleType="centerCrop"
 
@@ -36,11 +37,15 @@
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/nt_icn"
             android:layout_toEndOf="@id/i.."
+            android:paddingBottom="8dp"
+
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/uploader_name"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -55,13 +60,13 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
             android:id="@+id/nt_icn"
-            app:tint="?colorControlNormal"
+            app:tint="@color/teal_200"
             android:src="@drawable/ic_notifications_black_24dp"
             />
     </RelativeLayout>
