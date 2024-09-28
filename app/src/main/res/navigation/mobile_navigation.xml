@@ -40,4 +40,8 @@
         android:id="@+id/navigation_crime"
         android:name="com.example.ccc.ui.crime.CrimeFragment"
         android:label="See reported crimes" />
+    <fragment
+        android:id="@+id/navigation_t_o_u"
+        android:name="com.example.ccc.ui.tcs.TermsOfUse"
+        android:label="TermsOfUse" />
 </navigation>

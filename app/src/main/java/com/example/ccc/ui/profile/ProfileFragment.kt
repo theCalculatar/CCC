@@ -35,6 +35,12 @@ class ProfileFragment : Fragment() {
                 EditProfileFragment().show(childFragmentManager,"edit profile")
             }
 
+        view.findViewById<CardView>(R.id.terms_of_use)
+            .setOnClickListener {
+//                EditProfileFragment().show(childFragmentManager,"edit profile")
+                findNavController().navigate(R.id.navigation_t_o_u)
+            }
+
         view.findViewById<TextView>(R.id.sign_out).setOnClickListener {
             viewModel.signOut()
             activity?.finish()
