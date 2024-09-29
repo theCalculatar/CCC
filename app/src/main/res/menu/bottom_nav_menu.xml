@@ -11,6 +11,10 @@
         android:icon="@drawable/baseline_report_problem_24"
         android:title="@string/report"
         />
+    <item android:id="@+id/navigation_pushEmails"
+        android:icon="@drawable/baseline_student_card"
+        android:title="Help"
+        />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_user_alt"

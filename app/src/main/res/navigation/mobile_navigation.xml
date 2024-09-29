@@ -44,4 +44,8 @@
         android:id="@+id/navigation_t_o_u"
         android:name="com.example.ccc.ui.tcs.TermsOfUse"
         android:label="TermsOfUse" />
+    <fragment
+        android:id="@+id/navigation_pushEmails"
+        android:name="com.example.ccc.ui.emails.PushEmails"
+        android:label="PushEmails" />
 </navigation>
