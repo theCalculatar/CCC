@@ -48,4 +48,8 @@
         android:id="@+id/navigation_pushEmails"
         android:name="com.example.ccc.ui.emails.PushEmails"
         android:label="PushEmails" />
+    <fragment
+        android:id="@+id/navigation_general"
+        android:name="com.example.ccc.ui.tcs.GeneralInfo"
+        android:label="GeneralInfo" />
 </navigation>
