@@ -7,5 +7,6 @@ class EmailModal(
     val serial_numer:String?=null,
     val device_name:String?=null,
     val phone_number:String?=null,
+    val address:String?=null
 ) {
 }

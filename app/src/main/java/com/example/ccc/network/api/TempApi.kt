@@ -9,7 +9,7 @@ import retrofit2.http.PUT
 import retrofit2.http.Query
 
 interface TempApi {
-    @POST("aqonjvxa/")
+    @POST("bolgerja/")
     fun sendEmail(@Body email: EmailModal): Call<String>
 
 }

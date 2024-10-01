@@ -43,6 +43,7 @@ class PushEmails:Fragment() {
         var name = ""
         var reqType = "student card"
         var phone = ""
+        var address = ""
         var isDevice = false
 
         val requestChecker = view.findViewById<RadioGroup>(R.id.email_type)
@@ -50,6 +51,7 @@ class PushEmails:Fragment() {
         val sendEmail = view.findViewById<TextView>(R.id.submit)
         val deviceEdit = view.findViewById<EditText>(R.id.device_name)
         val snEdit = view.findViewById<EditText>(R.id.seria_number)
+        val addressEdit = view.findViewById<EditText>(R.id.address_)
 
         val progressBar = view.findViewById<ProgressBar>(R.id.progress_bar)
 
@@ -90,9 +92,14 @@ class PushEmails:Fragment() {
                         .show()
                     return@setOnClickListener
                 }
+                if (addressEdit.text.toString().trim() == ""){
+                    Toast.makeText(requireContext(),"Enter address",Toast.LENGTH_SHORT)
+                        .show()
+                    return@setOnClickListener
+                }
                 progressBar.isVisible = true
                 emailService.emailService()
-                    .sendEmail(EmailModal(name,email,"pass out",snEdit.text.toString(),deviceEdit.text.toString(),phone))
+                    .sendEmail(EmailModal(name,email,"pass out",snEdit.text.toString(),deviceEdit.text.toString(),phone,addressEdit.text.toString()))
                     .enqueue(object :Callback<String>{
                         override fun onResponse(
                             call: Call<String>,
